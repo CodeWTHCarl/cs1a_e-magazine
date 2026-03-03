@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <!-- Left Part: Logos -->
         <div class="header-part" id="header-logos">
-            <!-- IMPORTANT: Replace '#' with the actual paths to your logo files -->
             <img src="bipsu.png" alt="BiPSU Logo" class="logo">
             <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
         </div>
@@ -27,6 +25,8 @@
 
         <!-- Right Part: Navigation -->
         <div class="header-part" id="header-nav">
+            <!-- ADDED: Editor's Note Link -->
+            <a href="#editors-note" class="nav-link">Editor's Note</a>
             <a href="#about-us" class="nav-link">About Us</a>
             <a href="#contact" class="nav-link">Contact</a>
             <div class="nav-dropdown">
@@ -34,6 +34,8 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div id="dropdown-menu" class="dropdown-content">
+                    <!-- ADDED: Editor's Note to Dropdown -->
+                    <a href="#editors-note">Editorial Page</a>
                     <a href="#feature-articles">Feature Articles</a>
                     <a href="#human-interest">Human Interest</a>
                     <a href="#opinion-column">Opinion / Column</a>
@@ -44,39 +46,78 @@
     </header>
 
     <main>
-        <!-- ==== SECTION 1: FEATURE ARTICLES ==== -->
-        <section id="feature-articles" class="article-section">
-            <h2 class="section-title">Feature Articles</h2>
-
-            <!-- Entry 1 Template -->
-            <article class="entry">
-                <h3 class="entry-title">Your First Article Title</h3>
-                <div class="entry-media">
-                    <img src="https://via.placeholder.com/800x450/0D47A1/FFFFFF?text=Article+Media" alt="Description of the image">
-                </div>
+        <!-- ==== ADDED: EDITORIAL SECTION ==== -->
+        <section id="editors-note" class="article-section">
+            <h2 class="section-title">Editor's Note</h2>
+            <article class="entry editorial-page">
                 <div class="entry-content">
-                    <p>This is where the content of your article goes. This template is ready for you to customize with your own text, images, and videos. The colors are now based on your university and department logos.</p>
+                    <p><em>Dear Maem,</em></p>
+                    <p>Welcome to the inaugural (inaugural??!!) digital edition of our Art Appreciation magazine.</p>
+                    <p>editorial content here.</p>
+                    <div class="editorial-signature">
+                        <p>Sincerely,</p>
+                        <strong>The Editor-in-Chief</strong>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <!-- ==== SECTION 2: HUMAN INTEREST ==== -->
+        <!-- ==== SECTION 1: FEATURE ARTICLES ==== -->
+        <section id="feature-articles" class="article-section">
+            <h2 class="section-title">Feature Articles</h2>
+            <article class="entry">
+                <h3 class="entry-title"> Article Title</h3>
+                <div class="entry-media">
+                    <img src="https://via.placeholder.com/800x450/0D47A1/FFFFFF?text=Article+Media" alt="Description of the image">
+                </div>
+                <div class="entry-content">
+                    <p>contents.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- (Rest of your sections follow: Human Interest, Opinion, Creative Works) -->
         <section id="human-interest" class="article-section">
             <h2 class="section-title">Human Interest</h2>
-            
-             <!-- Entry 1 Template -->
             <article class="entry">
                 <h3 class="entry-title">A Compelling Human Story</h3>
                 <div class="entry-media">
                     <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
                 </div>
                 <div class="entry-content">
-                    <p>Content for the human interest story goes here. The layout remains consistent for a professional look and feel.</p>
+                    <p>contents.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="opinion-column" class="article-section">
+            <h2 class="section-title">Opinion Column</h2>
+            <article class="entry">
+                <h3 class="entry-title">A Compelling Human Story</h3>
+                <div class="entry-media">
+                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
+                </div>
+                <div class="entry-content">
+                    <p>contents.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="creative-works" class="article-section">
+            <h2 class="section-title">Creative Works</h2>
+            <article class="entry">
+                <h3 class="entry-title">A Compelling Human Story</h3>
+                <div class="entry-media">
+                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
+                </div>
+                <div class="entry-content">
+                    <p>contents.</p>
                 </div>
             </article>
         </section>
     </main>
 
+    <!-- (Your footer remains the same) -->
     <footer id="contact">
         <div class="footer-content">
             <div id="about-us" class="footer-section">
@@ -93,7 +134,6 @@
             &copy; 2026 BSCS 1A. All Rights Reserved.
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

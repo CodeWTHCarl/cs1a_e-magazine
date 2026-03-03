@@ -44,16 +44,16 @@ header {
     justify-content: flex-start;
     flex: 1;
 }
+
 #header-citation {
     flex: 2; /* Allows citation to take more space */
     justify-content: center;
     text-align: center;
-    font-size: 0.85rem;
-    color: #6c757d;
     line-height: 1.4;
     font-size: small;
     color: #F8F9FA;
 }
+
 #header-nav {
     justify-content: flex-end;
     flex: 1;
@@ -65,13 +65,14 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: var(--dark-charcoal);
     font-weight: 500;
     transition: color 0.2s;
     color: #F8F9FA;
 }
+
+/* Updated hover color so it shows up on the blue background */
 .nav-link:hover {
-    color: var(--deep-blue);
+    color: var(--gold); 
 }
 
 .nav-icon-btn {
@@ -84,12 +85,16 @@ header {
     font-size: 1.2rem;
     transition: background-color 0.2s;
 }
+
 .nav-icon-btn:hover {
-    background-color: var(--deep-blue); /* Slightly darker blue */
+    background-color: #0b3c8a; /* Slightly darker blue for the hover state */
 }
 
 /* --- Dropdown Menu --- */
-.nav-dropdown { position: relative; }
+.nav-dropdown { 
+    position: relative; 
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -102,9 +107,21 @@ header {
     border-radius: 5px;
     z-index: 1;
 }
-.dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
-.dropdown-content a:hover { background-color: var(--light-gray); }
-.show { display: block; } /* Controlled by JS */
+
+.dropdown-content a { 
+    color: black; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+}
+
+.dropdown-content a:hover { 
+    background-color: var(--light-gray); 
+}
+
+.show { 
+    display: block; 
+} /* Controlled by JS */
 
 /* --- Main Content & Article Layout --- */
 main {
@@ -112,9 +129,11 @@ main {
     max-width: 900px;
     margin: 0 auto;
 }
+
 .article-section {
     padding-top: 2rem;
 }
+
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -123,6 +142,7 @@ main {
     border-bottom: 3px solid var(--gold);
     padding-bottom: 0.5rem;
 }
+
 .entry {
     background: var(--white);
     border: 1px solid var(--light-gray);
@@ -131,15 +151,49 @@ main {
     margin-bottom: 4rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
+
 .entry-title {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
-.entry-media { margin-bottom: 1.5rem; }
-.entry-media img, .entry-media iframe { width: 100%; border-radius: 5px; height: auto; }
-.entry-media iframe { aspect-ratio: 16 / 9; }
-.entry-content { font-size: 1.1rem; line-height: 1.7; }
+
+.entry-media { 
+    margin-bottom: 1.5rem; 
+}
+
+.entry-media img, .entry-media iframe { 
+    width: 100%; 
+    border-radius: 5px; 
+    height: auto; 
+}
+
+.entry-media iframe { 
+    aspect-ratio: 16 / 9; 
+}
+
+.entry-content { 
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+}
+
+/* --- Added: Editorial Page Specific Styles --- */
+.editorial-page {
+    border-left: 5px solid var(--gold); /* A decorative accent */
+    font-style: normal;
+}
+
+.editorial-page .entry-content p {
+    margin-bottom: 1.5rem;
+}
+
+.editorial-signature {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+    text-align: right;
+    font-family: serif; /* Gives it a more formal 'letter' feel */
+}
 
 /* --- Footer --- */
 footer {
@@ -147,6 +201,7 @@ footer {
     color: white;
     padding-top: 3rem;
 }
+
 .footer-content {
     display: flex;
     justify-content: space-around;
@@ -156,8 +211,17 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.footer-section { flex: 1; min-width: 250px; }
-.footer-section h4 { border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; }
+
+.footer-section { 
+    flex: 1; 
+    min-width: 250px; 
+}
+
+.footer-section h4 { 
+    border-bottom: 2px solid var(--gold); 
+    padding-bottom: 0.5rem; 
+}
+
 .footer-bottom {
     text-align: center;
     padding: 1.5rem;
