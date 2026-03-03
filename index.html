@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Digital Magazine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Left Part: Logos -->
+        <div class="header-part" id="header-logos">
+            <!-- IMPORTANT: Replace '#' with the actual paths to your logo files -->
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        
+        <!-- Center Part: Citation -->
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong> 
+        </div>
+
+        <!-- Right Part: Navigation -->
+        <div class="header-part" id="header-nav">
+            <a href="#about-us" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="#feature-articles">Feature Articles</a>
+                    <a href="#human-interest">Human Interest</a>
+                    <a href="#opinion-column">Opinion / Column</a>
+                    <a href="#creative-works">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==== SECTION 1: FEATURE ARTICLES ==== -->
+        <section id="feature-articles" class="article-section">
+            <h2 class="section-title">Feature Articles</h2>
+
+            <!-- Entry 1 Template -->
+            <article class="entry">
+                <h3 class="entry-title">Your First Article Title</h3>
+                <div class="entry-media">
+                    <img src="https://via.placeholder.com/800x450/0D47A1/FFFFFF?text=Article+Media" alt="Description of the image">
+                </div>
+                <div class="entry-content">
+                    <p>This is where the content of your article goes. This template is ready for you to customize with your own text, images, and videos. The colors are now based on your university and department logos.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- ==== SECTION 2: HUMAN INTEREST ==== -->
+        <section id="human-interest" class="article-section">
+            <h2 class="section-title">Human Interest</h2>
+            
+             <!-- Entry 1 Template -->
+            <article class="entry">
+                <h3 class="entry-title">A Compelling Human Story</h3>
+                <div class="entry-media">
+                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
+                </div>
+                <div class="entry-content">
+                    <p>Content for the human interest story goes here. The layout remains consistent for a professional look and feel.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-us" class="footer-section">
+                <h4>About Us</h4>
+                <p>We are the BSCS 1A students, presenting our work for Art Appreciation. This digital magazine showcases our creativity and technical skills.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 BSCS 1A. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
