@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Digital Magazine</title>
+
+    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- Left Part: Logos -->
         <div class="header-part" id="header-logos">
             <img src="bipsu.png" alt="BiPSU Logo" class="logo">
             <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
         </div>
-        
-        <!-- Center Part: Citation -->
+
         <div class="header-part" id="header-citation">
-            <strong>REPUBLIC OF THE PHILIPPINES<br>
-            BILIRAN PROVINCE STATE UNIVERSITY<br>
-            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
-            BSCS 1A</strong> 
+            <strong>
+                REPUBLIC OF THE PHILIPPINES<br>
+                BILIRAN PROVINCE STATE UNIVERSITY<br>
+                SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+                BSCS 1A
+            </strong>
         </div>
 
-        <!-- Right Part: Navigation -->
         <div class="header-part" id="header-nav">
-            <!-- ADDED: Editor's Note Link -->
-            <a href="#editors-note" class="nav-link">Editor's Note</a>
-            <a href="#about-us" class="nav-link">About Us</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#editors-note" class="nav-link hide-mobile">Editor's Note</a>
+            <a href="#about-us" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+
             <div class="nav-dropdown">
-                <button id="nav-toggle" class="nav-icon-btn">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div id="dropdown-menu" class="dropdown-content">
-                    <!-- ADDED: Editor's Note to Dropdown -->
                     <a href="#editors-note">Editorial Page</a>
                     <a href="#feature-articles">Feature Articles</a>
                     <a href="#human-interest">Human Interest</a>
@@ -45,15 +48,37 @@
         </div>
     </header>
 
+    <!-- HERO INTRO SECTION -->
+    <section id="hero-intro">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-bottom-rule"></div>
+
+        <div class="hero-content">
+            <p class="hero-label">BSCS 1A &nbsp;·&nbsp; Art Appreciation &nbsp;·&nbsp; Vol. I &nbsp;·&nbsp; 2026</p>
+            <h1 class="hero-title">E&#8209;Digital<br>Magazine</h1>
+            <div class="hero-rule"></div>
+            <p class="hero-niche">The Age of Artificial Intelligence</p>
+            <p class="hero-tagline">Where Technology Meets Human Expression</p>
+            <a href="#editors-note" class="hero-cta">
+                Read the Issue &nbsp;<i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
     <main>
-        <!-- ==== ADDED: EDITORIAL SECTION ==== -->
+        <!-- EDITORIAL SECTION -->
         <section id="editors-note" class="article-section">
             <h2 class="section-title">Editor's Note</h2>
             <article class="entry editorial-page">
                 <div class="entry-content">
-                    <p><em>Dear Maem,</em></p>
-                    <p>Welcome to the inaugural (inaugural??!!) digital edition of our Art Appreciation magazine.</p>
-                    <p>editorial content here.</p>
+                    <p><em>Dear Ma'am,</em></p>
+                    <p>Welcome to the inaugural digital edition of our Art Appreciation magazine.</p>
                     <div class="editorial-signature">
                         <p>Sincerely,</p>
                         <strong>The Editor-in-Chief</strong>
@@ -62,78 +87,141 @@
             </article>
         </section>
 
-        <!-- ==== SECTION 1: FEATURE ARTICLES ==== -->
+        <!-- FEATURE ARTICLES -->
         <section id="feature-articles" class="article-section">
-            <h2 class="section-title">Feature Articles</h2>
-            <article class="entry">
-                <h3 class="entry-title"> Article Title</h3>
-                <div class="entry-media">
-                    <img src="https://via.placeholder.com/800x450/0D47A1/FFFFFF?text=Article+Media" alt="Description of the image">
-                </div>
-                <div class="entry-content">
-                    <p>contents.</p>
-                </div>
-            </article>
+            <div class="section-header">
+                <h2 class="section-title">Feature Articles</h2>
+                <button class="add-entry-btn" data-target="feature-articles">
+                    <i class="fas fa-plus"></i> Add Entry
+                </button>
+            </div>
+            <div class="entries-container">
+                <article class="entry">
+                    <h3 class="entry-title">Sample Feature</h3>
+                    <div class="entry-media">
+                        <img src="https://placehold.co/800x450/0D47A1/FFFFFF?text=Feature+Media" alt="Feature">
+                    </div>
+                    <div class="entry-content">
+                        <p>Content goes here.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <!-- (Rest of your sections follow: Human Interest, Opinion, Creative Works) -->
+        <!-- HUMAN INTEREST -->
         <section id="human-interest" class="article-section">
-            <h2 class="section-title">Human Interest</h2>
-            <article class="entry">
-                <h3 class="entry-title">A Compelling Human Story</h3>
-                <div class="entry-media">
-                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
-                </div>
-                <div class="entry-content">
-                    <p>contents.</p>
-                </div>
-            </article>
+            <div class="section-header">
+                <h2 class="section-title">Human Interest</h2>
+                <button class="add-entry-btn" data-target="human-interest">
+                    <i class="fas fa-plus"></i> Add Entry
+                </button>
+            </div>
+            <div class="entries-container">
+                <article class="entry">
+                    <h3 class="entry-title">A Compelling Story</h3>
+                    <div class="entry-media">
+                        <img src="https://placehold.co/800x450/004D40/FFFFFF?text=Human+Interest" alt="Human Interest">
+                    </div>
+                    <div class="entry-content">
+                        <p>Content goes here.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
+        <!-- OPINION COLUMN -->
         <section id="opinion-column" class="article-section">
-            <h2 class="section-title">Opinion Column</h2>
-            <article class="entry">
-                <h3 class="entry-title">A Compelling Human Story</h3>
-                <div class="entry-media">
-                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
-                </div>
-                <div class="entry-content">
-                    <p>contents.</p>
-                </div>
-            </article>
+            <div class="section-header">
+                <h2 class="section-title">Opinion Column</h2>
+                <button class="add-entry-btn" data-target="opinion-column">
+                    <i class="fas fa-plus"></i> Add Entry
+                </button>
+            </div>
+            <div class="entries-container">
+                <article class="entry">
+                    <h3 class="entry-title">Opinion Piece</h3>
+                    <div class="entry-media">
+                        <img src="https://placehold.co/800x450/212529/FFFFFF?text=Opinion+Media" alt="Opinion">
+                    </div>
+                    <div class="entry-content">
+                        <p>Content goes here.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
+        <!-- CREATIVE WORKS -->
         <section id="creative-works" class="article-section">
-            <h2 class="section-title">Creative Works</h2>
-            <article class="entry">
-                <h3 class="entry-title">A Compelling Human Story</h3>
-                <div class="entry-media">
-                    <img src="https://via.placeholder.com/800x450/004D40/FFFFFF?text=Article+Media" alt="Description of the image">
-                </div>
-                <div class="entry-content">
-                    <p>contents.</p>
-                </div>
-            </article>
+            <div class="section-header">
+                <h2 class="section-title">Creative Works</h2>
+                <button class="add-entry-btn" data-target="creative-works">
+                    <i class="fas fa-plus"></i> Add Entry
+                </button>
+            </div>
+            <div class="entries-container">
+                <article class="entry">
+                    <h3 class="entry-title">Artwork Title</h3>
+                    <div class="entry-media">
+                        <img src="https://placehold.co/800x450/FFC107/000000?text=Creative+Work" alt="Creative">
+                    </div>
+                    <div class="entry-content">
+                        <p>Content goes here.</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
-    <!-- (Your footer remains the same) -->
     <footer id="contact">
         <div class="footer-content">
             <div id="about-us" class="footer-section">
                 <h4>About Us</h4>
                 <p>We are the BSCS 1A students, presenting our work for Art Appreciation. This digital magazine showcases our creativity and technical skills.</p>
             </div>
+
             <div class="footer-section">
                 <h4>Contact Information</h4>
-                <p>School of Technology and Computer Studies</p>
-                <p>Biliran Province State University</p>
+                <p>
+                    School of Technology and Computer Studies<br>
+                    Biliran Province State University
+                </p>
             </div>
         </div>
+
         <div class="footer-bottom">
             &copy; 2026 BSCS 1A. All Rights Reserved.
         </div>
     </footer>
+
+    <!-- UPLOAD MODAL -->
+    <div id="upload-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="upload-title">
+        <div class="modal-content">
+            <button type="button" class="close-modal" aria-label="Close modal">&times;</button>
+            <h2 id="upload-title">Submit New Entry</h2>
+
+            <form id="upload-form">
+                <input type="hidden" id="target-section-id">
+
+                <div class="form-group">
+                    <label for="entry-title">Entry Title</label>
+                    <input type="text" id="entry-title" required placeholder="Enter a catchy title...">
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-image">Photojournalist Image</label>
+                    <input type="file" id="entry-image" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-text">Article Content</label>
+                    <textarea id="entry-text" rows="6" required placeholder="Write your article here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Publish Entry</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
