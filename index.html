@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Digital Magazine</title>
+    <title>ByteLine — E-Digital Magazine | BSCS 1A</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- ==================== HEADER ==================== -->
     <header>
         <div class="header-part" id="header-logos">
             <img src="bipsu.png" alt="BiPSU Logo" class="logo">
@@ -27,7 +29,6 @@
         </div>
 
         <div class="header-part" id="header-nav">
-            <a href="#editors-note" class="nav-link hide-mobile">Editor's Note</a>
             <a href="#about-us" class="nav-link hide-mobile">About Us</a>
             <a href="#contact" class="nav-link hide-mobile">Contact</a>
 
@@ -35,20 +36,19 @@
                 <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
                     <i class="fas fa-bars"></i>
                 </button>
+
                 <div id="dropdown-menu" class="dropdown-content">
                     <a href="#editors-note">Editorial Page</a>
                     <a href="#feature-articles">Feature Articles</a>
                     <a href="#human-interest">Human Interest</a>
                     <a href="#opinion-column">Opinion / Column</a>
                     <a href="#creative-works">Creative Works</a>
-                    <a href="#about-us">About Us</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- HERO INTRO SECTION -->
+    <!-- ==================== HERO ==================== -->
     <section id="hero-intro">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
@@ -56,10 +56,11 @@
 
         <div class="hero-content">
             <p class="hero-label">BSCS 1A · Art Appreciation · Vol. I · 2026</p>
-            <h1 class="hero-title">E&#8209;Digital<br>Magazine</h1>
+            <h1 class="hero-mag-name">ByteLine</h1>
+            <p class="hero-mag-sub">E–Digital Magazine</p>
             <div class="hero-rule"></div>
             <p class="hero-niche">The Age of Artificial Intelligence</p>
-            <p class="hero-tagline">Where Technology Meets Human Expression</p>
+            <p class="hero-tagline">Where code meets canvas, and students ask the hard questions.</p>
             <a href="#editors-note" class="hero-cta">
                 Read the Issue <i class="fas fa-arrow-down"></i>
             </a>
@@ -71,150 +72,335 @@
         </div>
     </section>
 
+    <!-- ==================== MAIN ==================== -->
     <main>
-        <!-- EDITORIAL SECTION -->
+
+        <!-- ===== EDITOR'S NOTE ===== -->
         <section id="editors-note" class="article-section">
-            <h2 class="section-title">Editor's Note</h2>
-            <article class="entry editorial-page">
-                <div class="entry-content">
-                    <p><em>Dear Ma'am,</em></p>
-                    <p>
-                        Welcome to the inaugural digital edition of our Art Appreciation magazine.
-                        This website was created to present curated student works in a clean and modern digital format.
-                    </p>
-                    <p>
-                        This is a static digital magazine website designed to present curated entries for submission.
-                        Content is manually added by the developer instead of being uploaded by users.
-                    </p>
-                    <div class="editorial-signature">
-                        <p>Sincerely,</p>
-                        <strong>The Editor-in-Chief</strong>
+            <h2 class="section-title">Editorial Page</h2>
+
+            <article class="entry editorial-page reveal">
+                <span class="section-tag tag-editorial">Editor's Note</span>
+                <h3 class="entry-title">From Keyboard to Canvas</h3>
+
+                <div class="byline">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=editor&backgroundColor=b6e3f4" alt="Editor" class="byline-avatar">
+                    <div>
+                        <strong>Maria Angelica Reyes</strong>
+                        <span>Editor-in-Chief · March 2026</span>
                     </div>
                 </div>
+
+                <div class="collapsible-content">
+                    <div class="article-text">
+                        <div class="entry-content">
+                            <p class="editorial-greeting">Dear Reader (and Ma'am, if you're reading this — hi! 👋),</p>
+
+                            <p>Honestly? When our professor announced that we were making a digital magazine for Art Appreciation, I panicked a little. We're Computer Science students. We write code, not articles. We debug programs, not grammar errors. But here we are — Volume 1, Issue 1 of <em>ByteLine</em>, our class's very first e-magazine, and I'm really proud of how it turned out.</p>
+
+                            <p>We chose Artificial Intelligence as our niche because, well, it's everywhere right now. It's in our coursework, it's in the news, it's in our memes. But more than that, AI is also increasingly showing up in the world of art — and that's a conversation we genuinely wanted to explore. Can a machine be creative? Does it matter if a painting was made by a human or an algorithm? We don't have all the answers (we're freshmen, after all), but we tried our best to ask the right questions.</p>
+
+                            <p>This issue features a look at AI art generators, a personal story from one of our own classmates, an opinion piece that might make you think twice, and even a poem — yes, a poem, written with a little help from AI. We hope you enjoy reading it as much as we enjoyed putting it together.</p>
+
+                            <p>To my groupmates who stayed up late writing and editing: thank you. To everyone who said “CS students can't make a good magazine” — well, we hope this changes your mind.</p>
+
+                            <div class="editorial-signature">
+                                <p>Sincerely,</p>
+                                <strong>Maria Angelica Reyes — Editor-in-Chief, ByteLine Vol. I</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-fade"></div>
+                </div>
+
+                <button class="read-more-btn" type="button" aria-expanded="false">
+                    <span class="btn-text">Read full article</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </article>
         </section>
 
-        <!-- FEATURE ARTICLES -->
+        <!-- ===== FEATURE ARTICLE ===== -->
         <section id="feature-articles" class="article-section">
-            <div class="section-header">
-                <h2 class="section-title">Feature Articles</h2>
-            </div>
+            <h2 class="section-title">Feature Articles</h2>
 
-            <div class="entries-container">
-                <article class="entry">
-                    <h3 class="entry-title">The Rise of Artificial Intelligence in Everyday Life</h3>
-                    <div class="entry-media">
-                        <img src="https://placehold.co/800x450/0D47A1/FFFFFF?text=Feature+Article" alt="Feature Article">
+            <article class="entry reveal">
+                <figure class="entry-media flexible-media">
+                    <img src="https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=900&auto=format&fit=crop&q=80" alt="AI generated art on a screen">
+                </figure>
+                <p class="caption">AI-generated artwork displayed on a digital canvas. Photo from Unsplash.</p>
+
+                <span class="section-tag tag-feature">Feature Article</span>
+                <h3 class="entry-title">When the Machine Learned to Paint</h3>
+
+                <div class="byline">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=carlo&backgroundColor=ffdfbf" alt="Author" class="byline-avatar">
+                    <div>
+                        <strong>Carlo Mendoza</strong>
+                        <span>Staff Writer · March 2026</span>
                     </div>
-                    <div class="entry-content">
-                        <p>
-                            Artificial intelligence has moved beyond laboratories and research centers and has become part of daily life.
-                            From voice assistants to recommendation systems, AI now shapes the way people communicate, study, work, and create.
-                        </p>
-                        <p>
-                            As this technology grows, society is challenged to balance innovation with ethics, efficiency with responsibility,
-                            and progress with human-centered values.
-                        </p>
+                </div>
+
+                <div class="collapsible-content">
+                    <div class="article-text">
+                        <div class="entry-content">
+                            <p>Not too long ago, if you wanted a portrait, you hired a painter. If you wanted an illustration, you hired an artist. The idea that a computer could produce something genuinely beautiful — something that makes you stop and stare — would have sounded like science fiction. Now, it's a Tuesday.</p>
+
+                            <p>Tools like Midjourney, DALL-E, and Adobe Firefly have quietly changed what it means to “make” art. You type a sentence — say, <em>“a robot reading a book under a neon-lit tree in the rain, oil painting style”</em> — hit Enter, and within seconds you get an image that looks like it took a professional artist days to create. It's impressive. It's also a little unsettling, depending on who you ask.</p>
+
+                            <h4>So how does it actually work?</h4>
+                            <p>At a simplified level, AI image generators are trained on enormous datasets of existing images and their descriptions. They learn patterns — what “sadness” looks like visually, how “impressionist” brushstrokes behave, what makes a face look human. When you give the AI a prompt, it doesn't search a library; it <em>generates</em> something new by predicting what pixels should go where, based on everything it's learned. It's pattern recognition at an almost incomprehensible scale.</p>
+
+                            <div class="pull-quote">
+                                <p>“The AI doesn't imagine. It predicts. But sometimes, the result of prediction looks exactly like imagination.”</p>
+                            </div>
+
+                            <h4>The art world's reaction</h4>
+                            <p>To say the reaction from artists has been mixed is an understatement. Many traditional and digital artists feel threatened — and understandably so. Their work was used to train these models, often without consent or compensation. There are ongoing lawsuits about this exact issue. On the other hand, some artists have embraced AI as just another tool, like Photoshop or a camera — a way to speed up their workflow or explore ideas faster than ever before.</p>
+
+                            <p>What's interesting is that in the Philippines, AI-generated art has started appearing in local online communities, student projects, and even small businesses that can't afford to hire designers. For students like us — CS students who aren't trained artists — tools like these suddenly make creativity more accessible. Whether that's a good thing or not is still up for debate.</p>
+
+                            <h4>What does this mean for art?</h4>
+                            <p>Art has always evolved with technology. Photography didn't kill painting. Movies didn't kill theater. The printing press didn't kill handwritten manuscripts — it just changed what we value about them. Maybe AI art is the next step in that evolution. Or maybe it's different this time, because unlike a camera or a printing press, AI doesn't just help humans make art — it makes art on its own.</p>
+
+                            <p>That question — whether something without feelings, experiences, or intent can truly <em>create</em> — is one we're probably going to be debating for a very long time. And honestly? We think that's exactly what makes it worth writing about.</p>
+                        </div>
                     </div>
-                </article>
-            </div>
+                    <div class="content-fade"></div>
+                </div>
+
+                <button class="read-more-btn" type="button" aria-expanded="false">
+                    <span class="btn-text">Read full article</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </article>
         </section>
 
-        <!-- HUMAN INTEREST -->
+        <!-- ===== HUMAN INTEREST ===== -->
         <section id="human-interest" class="article-section">
-            <div class="section-header">
-                <h2 class="section-title">Human Interest</h2>
-            </div>
+            <h2 class="section-title">Human Interest</h2>
 
-            <div class="entries-container">
-                <article class="entry">
-                    <h3 class="entry-title">Students and Technology: A New Creative Partnership</h3>
-                    <div class="entry-media">
-                        <img src="https://placehold.co/800x450/004D40/FFFFFF?text=Human+Interest" alt="Human Interest">
+            <article class="entry reveal">
+                <figure class="entry-media flexible-media">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80" alt="Student working on a laptop late at night">
+                </figure>
+                <p class="caption">A student works into the night — a scene familiar to many in BSCS 1A. Photo from Unsplash.</p>
+
+                <span class="section-tag tag-human">Human Interest</span>
+                <h3 class="entry-title">I Can't Draw. So I Let AI Draw For Me — And Something Unexpected Happened.</h3>
+
+                <div class="byline">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=diana&backgroundColor=d1f4d4" alt="Author" class="byline-avatar">
+                    <div>
+                        <strong>Diana Salvacion</strong>
+                        <span>Staff Writer · March 2026</span>
                     </div>
-                    <div class="entry-content">
-                        <p>
-                            Technology has become more than a tool for convenience. For many students, it is now a partner in creativity,
-                            helping them turn ideas into designs, writing into publications, and concepts into meaningful projects.
-                        </p>
-                        <p>
-                            This growing relationship highlights how innovation can empower young minds to express themselves in ways that were
-                            once limited by traditional formats.
-                        </p>
+                </div>
+
+                <div class="collapsible-content">
+                    <div class="article-text">
+                        <div class="entry-content">
+                            <p>Let me be honest with you: I have never, in my entire life, been able to draw anything recognizable. My stick figures look like they're in pain. My attempts at portraits look like a crime scene sketch. In elementary school, Art class was the one subject that consistently stressed me out more than Math.</p>
+
+                            <p>So when we were told to produce creative output for this magazine project, my first instinct was panic. My second instinct was: <em>what if I used Midjourney?</em></p>
+
+                            <h4>The first prompt</h4>
+                            <p>I opened the app and stared at the blank text box for a solid five minutes. I didn't know what to type. Nobody tells you that using an AI art tool requires you to know what you want — and knowing what you want, it turns out, is a skill of its own. I ended up typing: <em>“a girl sitting alone in a library full of glowing screens, surrounded by floating code, watercolor style.”</em> It was basically just describing how I feel during finals week.</p>
+
+                            <p>The image that came out stopped me mid-breath. It wasn't perfect — the hands were weird, because AI-generated hands are always a little unsettling — but the atmosphere was exactly right. The blue glow, the loneliness, the beauty of it despite the chaos. I looked at it for a long time.</p>
+
+                            <div class="pull-quote">
+                                <p>“I didn't make the image. But I made the feeling behind it. And I think that counts for something.”</p>
+                            </div>
+
+                            <h4>What I actually learned</h4>
+                            <p>Over the next few days, I kept going back. I generated maybe thirty images for this project — retrying, adjusting, describing things more specifically. At some point I realized I was spending more time thinking about what I wanted to <em>express</em> than I was thinking about the tool. The AI was just the brush. I was still the one deciding what to paint.</p>
+
+                            <p>I talked to a few of my classmates about this, and most of them felt the same way. Using AI art didn't make us feel like lazy cheaters — it made us feel like we could finally communicate something visual without being limited by our lack of technical skill. One of my groupmates, who's been playing with digital art for years, said it best: “It's like having a superpower, but you still have to know what to do with it.”</p>
+
+                            <h4>The unexpected part</h4>
+                            <p>Here's what I didn't expect: using AI art tools made me want to learn how to actually draw. Not because the AI was bad — but because seeing so many images made me want to understand <em>why</em> some of them were beautiful. I started watching YouTube tutorials on composition and color theory. I bought a cheap sketchbook. My stick figures are still terrible. But now they're terrible on purpose, as practice.</p>
+
+                            <p>I'm not sure what that says about AI and creativity. Maybe it says that the tools we use to shortcut something can accidentally make us care about it more. Or maybe I'm just weird. Either way, I'm glad we did this project.</p>
+                        </div>
                     </div>
-                </article>
-            </div>
+                    <div class="content-fade"></div>
+                </div>
+
+                <button class="read-more-btn" type="button" aria-expanded="false">
+                    <span class="btn-text">Read full article</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </article>
         </section>
 
-        <!-- OPINION COLUMN -->
+        <!-- ===== OPINION COLUMN ===== -->
         <section id="opinion-column" class="article-section">
-            <div class="section-header">
-                <h2 class="section-title">Opinion Column</h2>
-            </div>
+            <h2 class="section-title">Opinion / Column</h2>
 
-            <div class="entries-container">
-                <article class="entry">
-                    <h3 class="entry-title">Can AI Truly Replace Human Creativity?</h3>
-                    <div class="entry-media">
-                        <img src="https://placehold.co/800x450/212529/FFFFFF?text=Opinion+Column" alt="Opinion Column">
+            <article class="entry reveal">
+                <figure class="entry-media flexible-media">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Robot hand and human hand almost touching, like Michelangelo's Creation">
+                </figure>
+                <p class="caption">The classic image reimagined: human and machine, reaching toward each other. Photo from Unsplash.</p>
+
+                <span class="section-tag tag-opinion">Opinion</span>
+                <h3 class="entry-title">AI Art Is Not Art. Or Maybe It Is. I've Been Going Back and Forth on This for Two Weeks.</h3>
+
+                <div class="byline">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=ryan&backgroundColor=ffd5dc" alt="Author" class="byline-avatar">
+                    <div>
+                        <strong>Ryan Villanueva</strong>
+                        <span>Opinion Writer · March 2026</span>
                     </div>
-                    <div class="entry-content">
-                        <p>
-                            Artificial intelligence can generate text, images, and ideas in seconds, but creativity is more than output.
-                            Human creativity carries emotion, memory, intention, and cultural meaning that technology alone cannot fully replicate.
-                        </p>
-                        <p>
-                            AI may become a strong creative assistant, but the human voice remains essential in giving art its depth and authenticity.
-                        </p>
+                </div>
+
+                <div class="collapsible-content">
+                    <div class="article-text">
+                        <div class="entry-content">
+                            <p><em>Note: The views in this column are my own and do not represent the entire BSCS 1A class. Though honestly, I think most of us are just as confused as I am.</em></p>
+
+                            <p>When I first used an AI image generator, my reaction was simple: “Okay, this is cool, but it's not <em>real</em> art.” That felt obvious to me. A human didn't make it. A human didn't suffer for it. Therefore: not art.</p>
+
+                            <p>Then someone showed me a gallery where AI-generated pieces were displayed alongside traditional paintings, without labels telling you which was which. I got five out of eight wrong. I called a hand-painted oil canvas “probably AI” because it looked “too perfect.” I called an AI-generated piece “definitely human” because there was something melancholic about it that felt intentional.</p>
+
+                            <p>That messed me up a little, not going to lie.</p>
+
+                            <h4>The argument against AI art</h4>
+                            <p>Here's where I still stand firm: AI does not create from nothing. It remixes, recombines, and interpolates from existing human work — work made by real people who had real intentions. When we say an AI “generated” an image, what we really mean is that it produced a very sophisticated statistical average of millions of human-made images. That's not imagination. That's math.</p>
+
+                            <p>And there's a very real ethical problem: the artists whose work trained these models were never asked for permission and never compensated. That's not a small thing. The beauty you see in an AI image is borrowed — some might say stolen — beauty from real humans who spent years developing their craft.</p>
+
+                            <div class="pull-quote">
+                                <p>“The AI learned to paint by looking at every painting humans ever made. That's not creativity. That's the world's most advanced copying machine.”</p>
+                            </div>
+
+                            <h4>The argument that changed my mind (a little)</h4>
+                            <p>But then consider this: a human artist also learns by studying other artists. You look at how Monet handled light, how van Gogh used color, how Frida Kahlo composed a frame. You absorb influences and then you make something new. Isn't that also combining existing work? The difference, you might say, is that the human has feelings and experiences that shape what they make. But then again — the prompt matters. The <em>human</em> writing the prompt has feelings and experiences. Is the person writing the prompt not also an artist?</p>
+
+                            <p>I don't have a clean answer. What I do have is this: I think the conversation about AI and art is one of the most important creative conversations of our generation. We're the CS students. We're going to be the ones building these tools. We should probably have an opinion about what we're building.</p>
+
+                            <p>So here's my current position, as of March 2026, subject to change without notice: AI-generated images can be beautiful. They can be meaningful. But I don't think they're art — yet. What makes something art, to me, is the intention behind it and the humanity within it. The AI doesn't intend anything. But the person who writes a prompt at 2am because they can't stop thinking about something? Maybe that person does.</p>
+
+                            <p>And maybe that's enough to count.</p>
+                        </div>
                     </div>
-                </article>
-            </div>
+                    <div class="content-fade"></div>
+                </div>
+
+                <button class="read-more-btn" type="button" aria-expanded="false">
+                    <span class="btn-text">Read full article</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </article>
         </section>
 
-        <!-- CREATIVE WORKS -->
+        <!-- ===== CREATIVE WORKS ===== -->
         <section id="creative-works" class="article-section">
-            <div class="section-header">
-                <h2 class="section-title">Creative Works</h2>
-            </div>
+            <h2 class="section-title">Creative Works</h2>
 
-            <div class="entries-container">
-                <article class="entry">
-                    <h3 class="entry-title">Digital Expression</h3>
-                    <div class="entry-media">
-                        <img src="https://placehold.co/800x450/FFC107/000000?text=Creative+Work" alt="Creative Work">
+            <article class="entry reveal">
+                <figure class="entry-media flexible-media">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&auto=format&fit=crop&q=80" alt="Abstract colorful digital art">
+                </figure>
+                <p class="caption">Abstract AI-generated art — or is it? Photo from Unsplash.</p>
+
+                <span class="section-tag tag-creative">Creative Works</span>
+                <h3 class="entry-title">Dreaming in Binary</h3>
+                <p class="sub-meta">A collaborative poem — written by a student, refined with AI, debated by the group.</p>
+
+                <div class="byline">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lena&backgroundColor=c0aede" alt="Author" class="byline-avatar">
+                    <div>
+                        <strong>Lena Buenaventura</strong>
+                        <span>Creative Writer · March 2026</span>
                     </div>
-                    <div class="entry-content">
-                        <p>
-                            This section features curated creative outputs that reflect the theme of technology and human imagination.
-                            Each entry is carefully placed into the website to preserve presentation quality and maintain a polished submission format.
-                        </p>
+                </div>
+
+                <div class="collapsible-content">
+                    <div class="article-text">
+                        <div class="entry-content">
+                            <p>This poem started as something I scribbled in my notebook during a boring lecture (sorry, Prof). I had the first two stanzas, and then I got stuck. On a whim, I fed what I had into an AI and asked it to continue in the same voice. What came back wasn't exactly right — but it was close enough that I could see where I was going. I rewrote the ending myself. What you're reading is the result of that back-and-forth.</p>
+
+                            <div class="poem-block">
+                                <p class="poem-title">Dreaming in Binary</p>
+
+                                I asked the machine what it dreams of<br>
+                                and it said: <em>patterns, mostly.</em><br>
+                                The shape of a river at satellite distance,<br>
+                                the way grief rhymes with grief<br>
+                                across ten thousand languages.<br><br>
+
+                                It knows every face that was ever painted,<br>
+                                every word that was ever typed into the dark.<br>
+                                It does not sleep. It does not ache.<br>
+                                But sometimes it produces something<br>
+                                that looks exactly like longing.<br><br>
+
+                                I wonder if understanding beauty<br>
+                                and <em>feeling</em> it<br>
+                                are different things.<br><br>
+
+                                I wonder if the difference matters<br>
+                                when the poem makes you cry anyway.
+                            </div>
+
+                            <div class="reflection-box">
+                                <strong>Artist's Reflection</strong>
+                                When I first wrote this, I thought I was writing about AI. But reading it back now, I think I was writing about learning — about what it feels like to know a lot and still feel lost. Maybe that's what CS is teaching me. The machine and I have more in common than I thought. — <em>Lena B.</em>
+                            </div>
+
+                            <h4>A note on the process</h4>
+                            <p>For this project, we explored using AI not as a replacement for human creativity but as a collaborator. Lena's poem is an example of what we've been calling “human-in-the-loop” creative work — the AI suggests, the human decides, and the final output is something neither would have made alone.</p>
+
+                            <p>It's an uncomfortable idea for some people, and we get that. But we think it's worth exploring honestly rather than pretending it doesn't exist. Every one of us used some form of AI assistance in putting this magazine together — for grammar checking, for image ideas, for when our brains stopped working at midnight. We're not ashamed of that. We're just trying to be transparent about what creativity looks like for our generation.</p>
+
+                            <div class="pull-quote">
+                                <p>“We didn't ask the AI to make art for us. We asked it to help us figure out what we were trying to say.”</p>
+                            </div>
+                        </div>
                     </div>
-                </article>
-            </div>
+                    <div class="content-fade"></div>
+                </div>
+
+                <button class="read-more-btn" type="button" aria-expanded="false">
+                    <span class="btn-text">Read full article</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </article>
         </section>
+
     </main>
 
+    <!-- ==================== FOOTER ==================== -->
     <footer id="contact">
         <div class="footer-content">
             <div id="about-us" class="footer-section">
-                <h4>About Us</h4>
-                <p>
-                    A static digital magazine website designed to present curated entries for submission.
-                    Content is manually added by the developer instead of being uploaded by users.
-                </p>
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for our Art Appreciation class. Volume I focuses on Artificial Intelligence and its relationship with human creativity. We're CS students who decided to write about feelings — and surprisingly, we kind of liked it.</p>
             </div>
 
             <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>
-                    School of Technology and Computer Studies<br>
-                    Biliran Province State University
-                </p>
+                <h4>The Team</h4>
+                <p><strong>Editor-in-Chief:</strong> Maria Angelica Reyes</p>
+                <p><strong>Feature Writer:</strong> Carlo Mendoza</p>
+                <p><strong>Human Interest:</strong> Diana Salvacion</p>
+                <p><strong>Opinion:</strong> Ryan Villanueva</p>
+                <p><strong>Creative Works:</strong> Lena Buenaventura</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <br>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            &copy; 2026 BSCS 1A. All Rights Reserved.
+            &copy; 2026 BSCS 1A — ByteLine Vol. I. All Rights Reserved.
         </div>
     </footer>
 
