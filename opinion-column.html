@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opinion Column — ByteLine | BSCS 1A</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:'Lora',Georgia,serif;background:#f4f4f0;margin:0}
+    .cat-hero{background:linear-gradient(135deg, #1a0505 0%, #b71c1c 100%);padding:3rem 5% 2.2rem;text-align:center;border-bottom:3px solid #FFC107}
+    .cat-back{display:inline-flex;align-items:center;gap:.5rem;font-family:'Exo 2',sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,193,7,.7);text-decoration:none;margin-bottom:1rem}
+    .cat-back:hover{color:#FFC107}
+    .cat-hero-label{font-family:'Exo 2',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,193,7,.7);margin:0 0 .5rem;display:block}
+    .cat-hero h1{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);color:#fff;margin:0 0 .4rem;letter-spacing:-.02em}
+    .cat-hero p{font-family:'Exo 2',sans-serif;font-style:italic;color:rgba(255,255,255,.45);font-size:.9rem;margin:0}
+    .jump-nav{position:sticky;top:60px;z-index:900;background:#b71c1c;border-bottom:2px solid #FFC107;padding:.6rem 5%;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .jump-nav label{font-family:'Exo 2',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,193,7,.85);white-space:nowrap}
+    .jump-nav select{flex:1;max-width:520px;font-family:'Exo 2',sans-serif;font-size:.85rem;padding:.38rem .8rem;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,193,7,.35);border-radius:3px;cursor:pointer;outline:none}
+    .jump-nav select option{background:#b71c1c;color:#fff}
+    .jump-btn{font-family:'Exo 2',sans-serif;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;background:#FFC107;color:#1a0505;border:none;padding:.42rem 1.2rem;border-radius:3px;cursor:pointer;font-weight:600}
+    .articles-container{max-width:860px;margin:0 auto;padding:2.5rem 5%}
+    .article-anchor{scroll-margin-top:130px}
+    .entry{background:#fff;border-radius:6px;padding:0;margin-bottom:3rem;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .entry-body{padding:2.2rem 2.5rem 2.5rem}
+    .entry-title{font-size:1.75rem}
+    .section-tag{background:#b71c1c;color:#fff}
+    .entry-content h4,.pull-quote p{color:#b71c1c}
+    .back-to-top{text-align:center;padding:1rem 0 3rem;font-family:'Exo 2',sans-serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+    .back-to-top a{color:#b71c1c;text-decoration:none}
+    .back-to-top a:hover{color:#FFC107}
+    .section-group-title{font:700 .82rem 'Exo 2',sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#b71c1c;margin:0 0 1.2rem;padding-left:.9rem;border-left:4px solid #FFC107}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-part" id="header-logos">
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong>
+        </div>
+        <div class="header-part" id="header-nav">
+            <a href="about-us.html" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="index.html#editors-note">Editorial Page</a>
+                    <a href="feature-articles.html">Feature Articles</a>
+                    <a href="human-interest.html">Human Interest</a>
+                    <a href="opinion-column.html">Opinion / Column</a>
+                    <a href="creative-works.html">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <div class="cat-hero">
+    <a href="index.html" class="cat-back"><i class="fas fa-arrow-left"></i> Back to ByteLine</a>
+    <span class="cat-hero-label">ByteLine Vol. I &nbsp;·&nbsp; 2026</span>
+    <h1>Opinion / Column</h1>
+    <p>Student perspectives — personal, critical, and grounded in the realities of learning today.</p>
+  </div>
+  <nav class="jump-nav" aria-label="Jump to article">
+    <label for="article-select"><i class="fas fa-list"></i> &nbsp;Jump to:</label>
+    <select id="article-select">
+      <option value="">— Select an Entry —</option>
+    </select>
+    <button class="jump-btn" id="jump-go">Go <i class="fas fa-arrow-right"></i></button>
+  </nav>
+  <div class="articles-container">
+
+    <article id="article-1" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE OPINION ARTICLE 1 MAIN IMAGE HERE -->
+        <img src="opinion1.jpg" alt="Student studying thoughtfully">
+      </div>
+      <p class="caption">The quiet pressure of expectations many students carry but rarely talk about.</p>
+      <div class="entry-body">
+        <span class="section-tag">Opinion</span>
+        <h2 class="entry-title">I Was Supposed to Be the Best. Now, I’m Not.</h2>
+        <p class="sub-meta">The views expressed in this column are the author's personal reflections as a student.</p>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p>Once upon a time, I was someone who seemed to be ahead of everyone my age. I could read faster, write better, and speak more clearly. I understood things quickly, sometimes even faster than the people around me. I used to finish tasks before time was up and understand lessons before others even finished reading them.</p>
+          <p>But now… I’m not that person anymore.</p>
+          <p>Before, people around me pressured me because I was known as the “advanced” or “intelligent” one. A lot of my value seemed to come from academic achievements. Now the pressure does not really come from them anymore. Instead, it comes from me.</p>
+          <p>Somehow the expectations that others once had for me became my own expectations. I keep comparing myself to who I used to be and who I thought I would become. Because of that, even small failures feel very big to me.</p>
+          <p>Sometimes I am afraid of realizing that I am no longer the intelligent child I used to be.</p>
+          <div class="pull-quote"><p>“Now I feel like I’m falling behind in the same place that once felt easy.”</p></div>
+          <p>This time last year, sitting in class felt completely different. I felt confident and capable. The lessons were easier to understand. Now those same lessons feel harder, almost like a language I can hear but cannot fully understand.</p>
+          <p>I see people around me raising their hands and answering questions while I hesitate. They seem to understand things faster than I do now, and sometimes I cannot even finish what I start.</p>
+          <p>It makes me feel like the person I used to be disappeared.</p>
+          <p>Everywhere I go, I feel like I carry the memory of that old version of myself. It follows me into exams, assignments, and every blank page I struggle to answer.</p>
+          <p>Sometimes I wonder if that version of me even really existed, or if it was simply something people believed about me that I also began to believe.</p>
+          <p>Maybe the child who seemed to know everything didn’t really know herself.</p>
+          <p>Maybe I was just moving faster than everyone else for a while.</p>
+          <p>Maybe I never learned how to stay there.</p>
+          <p>And maybe there are others like me — people who were once called “the smart one,” now quietly trying to figure out who they are without that title.</p>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+    <hr class="article-divider">
+
+    <article id="article-2" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE OPINION ARTICLE 2 MAIN IMAGE HERE -->
+        <img src="opinion2.jpg" alt="Student using AI on a laptop">
+      </div>
+      <p class="caption">Artificial intelligence has become a silent study partner for many students.</p>
+      <div class="entry-body">
+        <span class="section-tag">Opinion</span>
+        <h2 class="entry-title">When Prompting Replaced Thinking</h2>
+        <p class="sub-meta">The views expressed in this column reflect the author's thoughts about AI and student learning.</p>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p>I’ll admit it: I use ChatGPT. For a while, I used it a lot.</p>
+          <p>At first, it felt like discovering a secret academic advantage. Whenever I needed help explaining a concept, starting an essay late at night, or generating ideas for a project, the solution was simple — open a chat box and ask.</p>
+          <p>Within seconds, artificial intelligence could summarize readings, clarify complicated topics, and organize thoughts faster than most textbooks.</p>
+          <p>For students overwhelmed by deadlines and academic pressure, that kind of assistance feels almost miraculous.</p>
+          <p>But somewhere along the way, I noticed something uncomfortable.</p>
+          <p>I realized I was no longer simply using AI as a tool. I had started depending on it.</p>
+          <div class="pull-quote"><p>“At some point, my first instinct stopped being to think. My first instinct became prompting.”</p></div>
+          <p>The realization came during an ordinary assignment. I caught myself wondering what I would even write if I didn’t open ChatGPT first.</p>
+          <p>That question stayed with me longer than I expected. It forced me to ask something strangely personal for a school task: who would I be academically without AI?</p>
+          <p>Students today do not just use artificial intelligence — we have developed a culture around identifying it.</p>
+          <p>People read a paragraph and immediately say, “That sounds like AI.” Sometimes the evidence is almost humorous. A single punctuation mark like an em dash suddenly becomes proof that a machine wrote the sentence.</p>
+          <p>Yet there is something ironic about this trend. While students have become skilled at detecting AI writing, many of us spend less time improving our own writing.</p>
+          <p>Tools like ChatGPT can still be genuinely helpful. They can explain difficult concepts and help generate ideas.</p>
+          <p>The problem begins when helpful tools become intellectual shortcuts.</p>
+          <p>When we rely on AI for every explanation or paragraph, something subtle begins to disappear: the struggle of thinking.</p>
+          <p>And that struggle is not a flaw in learning. It is the learning process itself.</p>
+          <p>Writing is messy. Thinking is difficult. But it is through revision, confusion, and persistence that understanding grows.</p>
+          <p>Artificial intelligence removes much of that struggle — and sometimes with it, our confidence in our own ability to think independently.</p>
+          <p>I still use ChatGPT sometimes. It remains a useful tool.</p>
+          <p>But the ideas that truly matter — our perspectives, opinions, and voices — must still come from somewhere else.</p>
+          <p>Ideally, they come from us.</p>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+
+    <div class="back-to-top">
+      <a href="#"><i class="fas fa-arrow-up"></i> &nbsp;Back to Top</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Back to ByteLine</a>
+    </div>
+  </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-byteline" class="footer-section">
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for Art Appreciation. Volume I explores technology, youth, and creativity in the digital era.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 BSCS 1A &mdash; ByteLine Vol. I. All Rights Reserved.</div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

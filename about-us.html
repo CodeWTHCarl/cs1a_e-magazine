@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — ByteLine | BSCS 1A</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{background:#f4f4f0;margin:0}
+    .team-hero{background:radial-gradient(circle at top right,rgba(255,193,7,.14),transparent 28%),linear-gradient(135deg,#091224 0%,#0D47A1 55%,#102644 100%);padding:4rem 5% 3rem;text-align:center;border-bottom:3px solid #FFC107}
+    .team-back{display:inline-flex;align-items:center;gap:.5rem;font-family:'Exo 2',sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,193,7,.75);text-decoration:none;margin-bottom:1rem}
+    .team-back:hover{color:#FFC107}
+    .team-hero-label{font:600 .7rem 'Exo 2',sans-serif;letter-spacing:.38em;text-transform:uppercase;color:rgba(255,193,7,.75);display:block;margin-bottom:.7rem}
+    .team-hero h1{font:900 clamp(2rem,5vw,3.6rem) 'Orbitron',monospace;color:#fff;margin:0 0 .6rem}
+    .team-hero p{font:400 .95rem 'Exo 2',sans-serif;line-height:1.7;color:rgba(255,255,255,.7);max-width:760px;margin:0 auto}
+    .team-main{max-width:1150px;margin:0 auto;padding:2.8rem 5% 3.5rem}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+    .team-card{background:#fff;border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.08);padding:1.5rem 1.45rem 1.6rem;border:1px solid rgba(13,71,161,.06)}
+    .team-card h2{font:700 .82rem 'Exo 2',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#0D47A1;margin:0 0 1rem;display:flex;align-items:center;gap:.6rem}
+    .team-card h2 i{color:#FFC107}
+    .team-list{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
+    .team-list li{padding:.7rem .85rem;border-radius:12px;background:#f8faff;border:1px solid rgba(13,71,161,.08)}
+    .team-list strong{display:block;font:600 .76rem 'Exo 2',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#102644;margin-bottom:.18rem}
+    .team-list span{color:#3f4957;line-height:1.6}
+    .team-wide{grid-column:1 / -1}
+    .pill-group{display:flex;flex-wrap:wrap;gap:.65rem}
+    .name-pill{display:inline-flex;align-items:center;padding:.55rem .8rem;border-radius:999px;background:#f0f4ff;border:1px solid #d6e2fb;font:400 .8rem 'Exo 2',sans-serif;color:#173a7a}
+    .subsection{margin-top:2rem}
+    .subsection h3{font:600 .75rem 'Exo 2',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#6c757d;margin:0 0 .9rem}
+    .team-note{margin-top:1.4rem;padding:1rem 1.15rem;border-left:4px solid #FFC107;background:rgba(255,193,7,.08);border-radius:0 12px 12px 0;font:400 .9rem 'Exo 2',sans-serif;color:#4f5665;line-height:1.7}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-part" id="header-logos">
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong>
+        </div>
+        <div class="header-part" id="header-nav">
+            <a href="about-us.html" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="index.html#editors-note">Editorial Page</a>
+                    <a href="feature-articles.html">Feature Articles</a>
+                    <a href="human-interest.html">Human Interest</a>
+                    <a href="opinion-column.html">Opinion / Column</a>
+                    <a href="creative-works.html">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <section class="team-hero">
+    <a href="index.html" class="team-back"><i class="fas fa-arrow-left"></i> Back to ByteLine</a>
+    <span class="team-hero-label">BSCS 1A · ByteLine Vol. I · Contributors</span>
+    <h1>The Team Behind ByteLine</h1>
+    <p>ByteLine is a collaborative digital magazine shaped by writers, editors, artists, developers, and classmates who brought together stories, reflections, and creative work for this issue.</p>
+  </section>
+
+  <main class="team-main">
+    <div class="team-grid">
+      <section class="team-card">
+        <h2><i class="fas fa-crown"></i> Editorial Leads</h2>
+        <ul class="team-list">
+          <li><strong>Editor-in-Chief</strong><span>Agang, Austien James</span></li>
+          <li><strong>Managing Editor</strong><span>Bebanco, Ken</span></li>
+          <li><strong>Editorial Staff</strong><span>Tanguihan, Jedelyn<br>Amaga, Lynzelle</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-newspaper"></i> Feature Article 1</h2>
+        <ul class="team-list">
+          <li><strong>Youth Identity in the Age of Social Media</strong><span>Bebanco, Ken<br>De Lara, Charlen<br>Gonhoran, Nino<br>Gil, Chita</span></li>
+          <li><strong>Photojournalist</strong><span>Domingo, Jose</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-brain"></i> Feature Article 2</h2>
+        <ul class="team-list">
+          <li><strong>Artificial Intelligence and the Future of Learning</strong><span>Amaga, Lynzelle<br>Rocha, Akihra Joy<br>Casas, Angela<br>Padar, Vince</span></li>
+          <li><strong>Photojournalist</strong><span>Cantre, James</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-laptop-code"></i> Feature Article 3</h2>
+        <ul class="team-list">
+          <li><strong>CTRL + S: Saving a Generation</strong><span>Cajeras, Sherry Mae<br>Amaga, Jhon Paul<br>Domingo, Jose<br>Callosa, Edvie</span></li>
+          <li><strong>Photojournalist</strong><span>Ortula, Shun Lee</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-comment-dots"></i> Opinion / Column 1</h2>
+        <ul class="team-list">
+          <li><strong>I Was Supposed to Be the Best. Now, I’m Not.</strong><span>Pacaanas, Dexter<br>Dela Cruz, Darlene<br>Sanosa, Kristine</span></li>
+          <li><strong>Cartoonist</strong><span>Sydney, Cris Jon</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-lightbulb"></i> Opinion / Column 2</h2>
+        <ul class="team-list">
+          <li><strong>When Prompting Replaced Thinking</strong><span>Arrogancia, Lovelynel<br>Servidad, Mark Justine<br>Abad, Jonathan<br>Mamantal, Prince</span></li>
+          <li><strong>Cartoonist</strong><span>De Lara, Gian Dwayne</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-heart"></i> Human Interest</h2>
+        <ul class="team-list">
+          <li><strong>Determination Beyond Limitations: A Computer Science Student’s Journey</strong><span>Leorag, Mark Giane<br>Tanguihan, Jedelyn<br>Castin, Marian<br>Delima, Nicole</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-feather-alt"></i> Poems</h2>
+        <ul class="team-list">
+          <li><strong>Wired Dreams</strong><span>Mamantal, Prince<br>Bernel, Nico Joe</span></li>
+          <li><strong>Technology in Learning's Light</strong><span>Malpas, Victor Ian<br>Platilla, Gerald</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-book-open"></i> Flash Fiction</h2>
+        <ul class="team-list">
+          <li><strong>Cancel Culture Among Youth in the Internet: Accountability or Online Mob Rule?</strong><span>Dapdap, Sitte Jane<br>Romasasa, Hanna Rhyza</span></li>
+          <li><strong>Version 1.0</strong><span>Baquiro, Clinther<br>Nada, Wendel</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card">
+        <h2><i class="fas fa-globe-asia"></i> Culture / Community / Technology</h2>
+        <ul class="team-list">
+          <li><strong>Section Team</strong><span>Sinangote, Hector Paul<br>Cabalquinto, Crislyn</span></li>
+        </ul>
+      </section>
+
+      <section class="team-card team-wide">
+        <h2><i class="fas fa-palette"></i> Layout Artists & Developers</h2>
+        <div class="subsection">
+          <h3>Layout Artists</h3>
+          <div class="pill-group">
+            <span class="name-pill">Amaba, Ayle</span>
+            <span class="name-pill">Agang, Austien James</span>
+            <span class="name-pill">Bacaltos, Deon</span>
+          </div>
+        </div>
+        <div class="subsection">
+          <h3>Developers</h3>
+          <div class="pill-group">
+            <span class="name-pill">Aligway, Jorge Leenard</span>
+            <span class="name-pill">Gelizon, Ken Carlo</span>
+          </div>
+        </div>
+        <div class="team-note">ByteLine was built through shared effort across writing, editing, design, media, and development. This page highlights the people who helped bring the issue to life.</div>
+      </section>
+    </div>
+  </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-byteline" class="footer-section">
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for Art Appreciation. Volume I explores technology, youth, and creativity in the digital era.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 BSCS 1A &mdash; ByteLine Vol. I. All Rights Reserved.</div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

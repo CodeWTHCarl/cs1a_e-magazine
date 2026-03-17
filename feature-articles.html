@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Articles — ByteLine | BSCS 1A</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:'Lora',Georgia,serif;background:#f4f4f0;margin:0}
+    .cat-hero{background:linear-gradient(135deg, #0a1628 0%, #0D47A1 100%);padding:3rem 5% 2.2rem;text-align:center;border-bottom:3px solid #FFC107}
+    .cat-back{display:inline-flex;align-items:center;gap:.5rem;font-family:'Exo 2',sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,193,7,.7);text-decoration:none;margin-bottom:1rem}
+    .cat-back:hover{color:#FFC107}
+    .cat-hero-label{font-family:'Exo 2',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,193,7,.7);margin:0 0 .5rem;display:block}
+    .cat-hero h1{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);color:#fff;margin:0 0 .4rem;letter-spacing:-.02em}
+    .cat-hero p{font-family:'Exo 2',sans-serif;font-style:italic;color:rgba(255,255,255,.45);font-size:.9rem;margin:0}
+    .jump-nav{position:sticky;top:60px;z-index:900;background:#0D47A1;border-bottom:2px solid #FFC107;padding:.6rem 5%;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .jump-nav label{font-family:'Exo 2',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,193,7,.85);white-space:nowrap}
+    .jump-nav select{flex:1;max-width:520px;font-family:'Exo 2',sans-serif;font-size:.85rem;padding:.38rem .8rem;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,193,7,.35);border-radius:3px;cursor:pointer;outline:none}
+    .jump-nav select option{background:#0D47A1;color:#fff}
+    .jump-btn{font-family:'Exo 2',sans-serif;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;background:#FFC107;color:#0a1628;border:none;padding:.42rem 1.2rem;border-radius:3px;cursor:pointer;font-weight:600}
+    .articles-container{max-width:860px;margin:0 auto;padding:2.5rem 5%}
+    .article-anchor{scroll-margin-top:130px}
+    .entry{background:#fff;border-radius:6px;padding:0;margin-bottom:3rem;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .entry-body{padding:2.2rem 2.5rem 2.5rem}
+    .entry-title{font-size:1.75rem}
+    .section-tag{background:#0D47A1;color:#fff}
+    .entry-content h4,.pull-quote p{color:#0D47A1}
+    .back-to-top{text-align:center;padding:1rem 0 3rem;font-family:'Exo 2',sans-serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+    .back-to-top a{color:#0D47A1;text-decoration:none}
+    .back-to-top a:hover{color:#FFC107}
+    .section-group-title{font:700 .82rem 'Exo 2',sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#0D47A1;margin:0 0 1.2rem;padding-left:.9rem;border-left:4px solid #FFC107}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-part" id="header-logos">
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong>
+        </div>
+        <div class="header-part" id="header-nav">
+            <a href="about-us.html" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="index.html#editors-note">Editorial Page</a>
+                    <a href="feature-articles.html">Feature Articles</a>
+                    <a href="human-interest.html">Human Interest</a>
+                    <a href="opinion-column.html">Opinion / Column</a>
+                    <a href="creative-works.html">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <div class="cat-hero">
+    <a href="index.html" class="cat-back"><i class="fas fa-arrow-left"></i> Back to ByteLine</a>
+    <span class="cat-hero-label">ByteLine Vol. I &nbsp;·&nbsp; 2026</span>
+    <h1>Feature Articles</h1>
+    <p>In-depth reporting on identity, learning, and survival in the digital era.</p>
+  </div>
+  <nav class="jump-nav" aria-label="Jump to article">
+    <label for="article-select"><i class="fas fa-list"></i> &nbsp;Jump to:</label>
+    <select id="article-select">
+      <option value="">— Select an Entry —</option>
+    </select>
+    <button class="jump-btn" id="jump-go">Go <i class="fas fa-arrow-right"></i></button>
+  </nav>
+  <div class="articles-container">
+
+    <article id="article-1" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE FEATURE ARTICLE 1 MAIN IMAGE HERE -->
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80" alt="Young person using social media">
+      </div>
+      <p class="caption">Social media can connect, inspire, and also quietly shape how young people see themselves.</p>
+      <div class="entry-body">
+        <span class="section-tag">Feature Article</span>
+        <h2 class="entry-title">Youth Identity in the Age of Social Media</h2>
+        <p class="sub-meta">Feature Article 1</p>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p>“Ring! Ring! Ring!” The alarm clock blares loudly across the room.</p>
+          <p>“I’m late again!” I shout as I hurriedly grab my phone from the bedside table. Before even getting out of bed, my thumb instinctively opens TikTok. I send my daily streaks and begin scrolling through videos. One clip catches my attention, and I pause.</p>
+          <p>“She’s so beautiful,” I mutter while staring at the screen. Her flawless face, perfect lighting, and thousands of likes make me wish I had the same conventionally attractive features. Maybe then my own videos would gain attention too.</p>
+          <p>“Why am I so ugly?” I quietly question myself.</p>
+          <p>“Why can’t I be like them?”</p>
+          <p>The thoughts linger longer than the short video I just watched.</p>
+          <p>For many young adolescents today, this situation is not unusual. In an era where social media dominates everyday life, many youths begin their day with notifications, streaks, and endless scrolling. Social media platforms have become spaces where young people express themselves, share experiences, and connect with others. However, these same platforms can also shape how young people view themselves and their identity.</p>
+          <p>We get validation through comments, shares, follower counts, and our self-worth from engagement statistics social media gives us. Likes boost our self-esteem while discouraging us if our posts go unnoticed. We start to see our self-worth and identity in how social media values us, shaping how we see ourselves.</p>
+          <p>Creativity and talent can be shared through social media, encouraging young people to express their passions and interests. With the people and communities they connect to, they discover more about their identity.</p>
+          <p>There are many opportunities that come with social media, but there are just as many disadvantages to the platform. Social media has a culture of comparison, and a big reason as to why that is the case is how many social media profiles are edited and filtered. They are altered to appear as if they are living the best and greatest life. These profiles do not show the reality of life and instead only post highlights. Because of that, social media users tend to compare themselves to the profiles, and as a result, many users of social media feel the need to measure themselves side by side with other social media users. This creates unhealthy ideals of beauty, success, and happiness.</p>
+          <p>Because of all of the social media users, a social media platform has both good and bad things, especially with the youth. Social media is good in the sense of users being able to express themselves openly, but a lot of the time, that can lead to a lot of emotional distress. Problems like anxiety, insecurities, and dissatisfactions with an individual’s looks are common. Youth users can also make many connections and relationships that can help with their identity development.</p>
+          <p>Nonetheless, experts do say that promoting body appreciation can help counteract these effects. In fact, body appreciation is independently associated with many outcomes that are considered positive. These outcomes include an increase in self-esteem, better eating habits, and taking better care of oneself. Unlike the attitudes directed toward appearance that tends to focus on whether or not an individual feels positive or negative about their looks, body appreciation frameworks are about valuing one’s body and what it can do.</p>
+          <p>Encouraging appreciation of one’s own body and consumption of body-positive media can help normalize body appreciation and reduce the occurrence of body dissatisfaction among the youth. The portrayal of various body types and different and diverse representations of bodies can counter the socially constructed and unrealistic beauty ideals that are widely promoted in media.</p>
+          <p>The influence of social media on youth identity is complicated. It can be used to express ideas and emotions and is a means for creativity but can also place pressure on users to conform to their perceived social expectations. For young people today, the challenge is to find a way of using social media that is constructive and promotes their own personal development, rather than using social media to measure their self-worth. Social media should not define their identity. Young people experience and highly value the individuality that makes them unique. It is what is important, not the superficiality of how many "likes" they receive on their posts.</p>
+          <h4>References</h4>
+          <p>Rehman, A. (2025). Social Media and Youth Identity Formation.</p>
+          <p>Tiggemann, M., &amp; Anderberg, I. (2019). Social media is not real: The effect of “Instagram vs reality” images on women’s social comparison and body image.</p>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+    <hr class="article-divider">
+
+    <article id="article-2" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE FEATURE ARTICLE 2 MAIN IMAGE HERE -->
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&auto=format&fit=crop&q=80" alt="Artificial intelligence concept">
+      </div>
+      <p class="caption">As AI becomes part of education, the real question is how it shapes the process of thinking.</p>
+      <div class="entry-body">
+        <span class="section-tag">Feature Article</span>
+        <h2 class="entry-title">Who Holds the Pen? Artificial Intelligence and the Future of Learning</h2>
+        <p class="sub-meta">Feature Article 2</p>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p>Surveys are showing that 84-92% of today's high school and college students use generative AI as a resource to help with their school work (College Board, 2025) and 85-86% of their teachers have also begun to do so.</p>
+          <p>No longer is writing alone; it has been replaced with a collaboration between humans and computers using algorithms to write, revise, and replace the human completely.</p>
+          <p>In this day and age when machines can write essays, come up with ideas, and give grades in seconds, a very important question comes into focus: Who is really writing with the pen – the person developing their own mind through learning or the algorithm that is creating it?</p>
+          <p>The pen sits on top of the paper and moves due to the hand of a student and powered by computer code that guides each stroke of the pen, corrects each curve of the letter, and at times, adds the student’s name as a signature to the final product. Does the finished work represent a unique and original idea of the human writer or was it created through a form of sorcery where both humans and computers worked together to create it?</p>
+          <p>People used to fear physical weapons. But perhaps the real danger now sits quietly on our screens — a tool that writes our thoughts before we even have the chance to think them ourselves.</p>
+          <p>This shift is already visible inside today’s classrooms. What once took hours now takes minutes. The struggle with a blank page is fading as AI tools fill in sentences before a student even finishes thinking. While this efficiency is appealing, the true value of learning lies in the process itself — in the struggle, the mistakes, and the slow crafting of ideas where real understanding takes root. When machines generate answers instantly, students may gain speed but risk losing the deeper engagement that turns information into lasting knowledge.</p>
+          <p>Dr. Beetham cautions that the greatest danger posed by the use of AI in education is not that students will become complacent; rather, the risk is that it will eliminate the process of productive struggle that gives relevance to students’ learning. Productive struggle is not a flaw in the process of education; it is the means by which learners achieve success.</p>
+          <p>According to Alexandra Harry (2023), Artificial Intelligence (AI) is revolutionizing the way people think about and implement learning and teaching. AI technologies can analyze learner data and create a more personalized and efficient learning process.</p>
+          <p>The AI types fall into three categories: Guidance, Learning, and Teacher, which encompass personalized student recommendations, intelligent tutorials, auto grading, and improvement of resources. These tools increase efficiency, but also raise ethical concerns around privacy and fairness.</p>
+          <p>A lot of people see AI as one of the most leveling forces in education today. Not every student has access to a personal tutor, but AI is always available. It can explain hard concepts in plain language, help build an outline, or make information more accessible for students with disabilities.</p>
+          <p>But beneath the surface of this efficiency lies a quieter, more troubling cost. When a student turns to an algorithm for the “right” answer, something important gets skipped: the struggle. That struggle is not inefficiency. It is the work. And when we remove it, we don’t just save time — we cut the very process through which the brain forms lasting connections.</p>
+          <p>There is also the matter of trust. AI systems can state falsehoods with complete confidence. A student who has not been trained to question, to cross-check, and to sit with uncertainty becomes a vessel for misinformation without ever meaning to be.</p>
+          <p>What we risk, in the end, is a generation that looks educated on paper. They will have credentials, polished outputs, and completed coursework — but if we hand the hard, unglamorous work of thinking over to machines, we should not be surprised when the people we graduate cannot do it themselves.</p>
+          <p>Instead of forbidding AI, it would be more beneficial to teach students how to use it. Schools should promote AI literacy so learners understand how these systems work, what their limits are, and why their answers should be doubted and double-checked.</p>
+          <p>Teachers can also make assessments more process-based rather than result-based by allowing students to write, discuss, and present what they are thinking, even when technology is involved.</p>
+          <p>The goal is not to exclude AI from the classroom, but to enable AI to assist learning without dominating the cognitive and intellectual process that enables students to understand.</p>
+          <p>So, who truly holds the pen? The answer lies not in choosing between humans and machines, but in understanding what each one is truly capable of. The machine may move the pen — but only the mind that has struggled with the question can truly claim to have understood it.</p>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+    <hr class="article-divider">
+
+    <article id="article-3" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE FEATURE ARTICLE 3 MAIN IMAGE HERE -->
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&auto=format&fit=crop&q=80" alt="Laptop screen glowing in a dark room">
+      </div>
+      <p class="caption">For many students, learning now happens in the glow of open tabs, late-night deadlines, and blinking notifications.</p>
+      <div class="entry-body">
+        <span class="section-tag">Feature Article</span>
+        <h2 class="entry-title">CTRL + S: Saving a Generation</h2>
+        <p class="sub-meta">Feature Article 3</p>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p><em>Loading…</em></p>
+          <p>The room is dark except for the soft, bluish glow of a laptop screen. Fingers hover over the keyboard, pausing only to scroll through tabs of assignments, online lectures, and group chats. Notifications blink like tiny alarms: “Deadline until 11:59 pm.” Eyes sting, posture aches, and a kind of sound echoes every night in the room: “Hay, kakapoy. Katugon nako.” However, the student doesn’t stop.</p>
+          <h4>Searching…</h4>
+          <p>Modern technology has become the backbone of student life. Gone are the days when research meant walking through dusty library halls or copying notes by hand. Today, a simple Google search can unlock the wisdom of hundreds of textbooks in seconds. Students attend virtual classes, submit digital assignments, and collaborate with classmates scattered across towns and provinces.</p>
+          <p>Yet, the digital landscape is a double-edged sword. For youth, technology is both a lifeline and a labyrinth. “Sometimes it feels like I’m studying, but most of the time sige lang ko’g scroll sa screen,” admits 18-year-old college student Sherry Mae Cajeras from Leyte.</p>
+          <h4>Error 404 – Balance Not Found</h4>
+          <p>With endless notifications and constant online activity, students’ lives can become a chaotic mess. Assignments pile up. Sleep schedules crumble. Mental fatigue sets in. The same devices that help them learn also distract, stress, and exhaust.</p>
+          <p>For some, it’s late-night essay writing with one eye on the screen and another on social media. For others, it’s comparing grades, achievements, and extracurricular highlights online, feeling the silent pressure of being “less than” in a digital race.</p>
+          <p>“The problem isn’t just academics anymore,” says Sherry. “It’s the feeling that if I’m not online, I’m missing something—like everyone else is moving forward except me.”</p>
+          <h4>System Overload</h4>
+          <p>The breaking point comes quietly. A student stares at a screen full of open tabs—research articles, unfinished homework, chat notifications, and pending emails. Every task screams for attention, yet none are fully tackled.</p>
+          <p>It is in these moments that students feel the weight of technology. Overstimulation and pressure collide. Productivity apps no longer feel helpful—they are reminders of everything unfinished.</p>
+          <h4>Ctrl + S</h4>
+          <p>But not all is lost. With awareness and discipline, students are learning to reclaim control. Setting boundaries, scheduling offline time, prioritizing tasks, and using technology purposefully transforms the digital battlefield into a tool for growth. Productivity apps help, yes—but mindfulness, focus, and balance become the true “save commands.”</p>
+          <p>For Sherry, the turning point came when she started timing her study sessions, turning off notifications, and keeping social media for short breaks. “It’s not about avoiding technology,” she explains. “Modepende ra kanako kung unsaon nako ni paggamit nga mga technologies sakong palibot.”</p>
+          <h4>Restarting System</h4>
+          <p>Youth today are not victims of technology—they are its navigators. With guidance and self-awareness, they can harness it to learn faster, create more, and dream bigger. Screens, apps, and AI tools are only as powerful as the hands that control them.</p>
+          <div class="pull-quote"><p>“The future will not be written by machines. Naa lang sa tawo unsaon niya paggamit ni nga mga butang para maka benefit sa iya.”</p></div>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+
+    <div class="back-to-top">
+      <a href="#"><i class="fas fa-arrow-up"></i> &nbsp;Back to Top</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Back to ByteLine</a>
+    </div>
+  </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-byteline" class="footer-section">
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for Art Appreciation. Volume I explores technology, youth, and creativity in the digital era.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 BSCS 1A &mdash; ByteLine Vol. I. All Rights Reserved.</div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

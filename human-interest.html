@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Interest — ByteLine | BSCS 1A</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:'Lora',Georgia,serif;background:#f4f4f0;margin:0}
+    .cat-hero{background:linear-gradient(135deg, #0a2018 0%, #004D40 100%);padding:3rem 5% 2.2rem;text-align:center;border-bottom:3px solid #FFC107}
+    .cat-back{display:inline-flex;align-items:center;gap:.5rem;font-family:'Exo 2',sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,193,7,.7);text-decoration:none;margin-bottom:1rem}
+    .cat-back:hover{color:#FFC107}
+    .cat-hero-label{font-family:'Exo 2',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,193,7,.7);margin:0 0 .5rem;display:block}
+    .cat-hero h1{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);color:#fff;margin:0 0 .4rem;letter-spacing:-.02em}
+    .cat-hero p{font-family:'Exo 2',sans-serif;font-style:italic;color:rgba(255,255,255,.45);font-size:.9rem;margin:0}
+    .jump-nav{position:sticky;top:60px;z-index:900;background:#004D40;border-bottom:2px solid #FFC107;padding:.6rem 5%;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .jump-nav label{font-family:'Exo 2',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,193,7,.85);white-space:nowrap}
+    .jump-nav select{flex:1;max-width:520px;font-family:'Exo 2',sans-serif;font-size:.85rem;padding:.38rem .8rem;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,193,7,.35);border-radius:3px;cursor:pointer;outline:none}
+    .jump-nav select option{background:#004D40;color:#fff}
+    .jump-btn{font-family:'Exo 2',sans-serif;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;background:#FFC107;color:#0a1628;border:none;padding:.42rem 1.2rem;border-radius:3px;cursor:pointer;font-weight:600}
+    .articles-container{max-width:860px;margin:0 auto;padding:2.5rem 5%}
+    .article-anchor{scroll-margin-top:130px}
+    .entry{background:#fff;border-radius:6px;padding:0;margin-bottom:3rem;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .entry-body{padding:2.2rem 2.5rem 2.5rem}
+    .entry-title{font-size:1.75rem}
+    .section-tag{background:#004D40;color:#fff}
+    .entry-content h4,.pull-quote p{color:#004D40}
+    .back-to-top{text-align:center;padding:1rem 0 3rem;font-family:'Exo 2',sans-serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+    .back-to-top a{color:#004D40;text-decoration:none}
+    .back-to-top a:hover{color:#FFC107}
+    .section-group-title{font:700 .82rem 'Exo 2',sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#004D40;margin:0 0 1.2rem;padding-left:.9rem;border-left:4px solid #FFC107}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-part" id="header-logos">
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong>
+        </div>
+        <div class="header-part" id="header-nav">
+            <a href="about-us.html" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="index.html#editors-note">Editorial Page</a>
+                    <a href="feature-articles.html">Feature Articles</a>
+                    <a href="human-interest.html">Human Interest</a>
+                    <a href="opinion-column.html">Opinion / Column</a>
+                    <a href="creative-works.html">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <div class="cat-hero">
+    <a href="index.html" class="cat-back"><i class="fas fa-arrow-left"></i> Back to ByteLine</a>
+    <span class="cat-hero-label">ByteLine Vol. I &nbsp;·&nbsp; 2026</span>
+    <h1>Human Interest</h1>
+    <p>Personal stories from students living through challenge, scarcity, and determination.</p>
+  </div>
+  <nav class="jump-nav" aria-label="Jump to article">
+    <label for="article-select"><i class="fas fa-list"></i> &nbsp;Jump to:</label>
+    <select id="article-select">
+      <option value="">— Select an Entry —</option>
+    </select>
+    <button class="jump-btn" id="jump-go">Go <i class="fas fa-arrow-right"></i></button>
+  </nav>
+  <div class="articles-container">
+
+    <article id="article-1" class="entry article-anchor">
+      <div class="entry-media flexible-media">
+        <!-- REPLACE HUMAN INTEREST MAIN IMAGE HERE -->
+        <img src="human1.jpg" alt="Computer science student studying at a laptop">
+      </div>
+      <p class="caption">A computer science student continues his journey despite limited resources.</p>
+      <div class="entry-body">
+        <span class="section-tag">Human Interest</span>
+        <h2 class="entry-title">Determination Beyond Limitations: A Computer Science Student’s Journey</h2>
+        <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+          <p>In today’s fast-changing world, technology plays an important role in everyday life especially for students. For Arr-Jay Batuto, a fourth-year student, this growing influence of technology became the reason he chose to pursue the degree in the field of Computer Science.</p>
+          <p>He believed that learning about computers and programming would not just help him to be prepared for the future he dreamed of but also allow him to contribute to a society that is becoming increasingly dependent on technology.</p>
+          <p>But the journey was far from easy as he imagined. One of the biggest challenges he encountered during his college years was the lack of access to proper equipment—especially a laptop.</p>
+          <p>In a course where programming, coding, and computer-based activities are part of daily learning, not having a personal laptop made studying much more difficult.</p>
+          <p>“At times, I felt like giving up,” he admitted.</p>
+          <p>Surviving in a technology-focused course without the necessary tools was a struggle he had to face almost every day.</p>
+          <p>Despite these difficulties, he was not alone in his journey. His friends played a significant role in helping him continue his studies. During coding and programming activities, his friends willingly shared their laptops so he could complete his tasks and keep up with lessons.</p>
+          <p>Their support and kindness became a source of motivation that encouraged him to continue his journey.</p>
+          <p>Because of the support of his friends and with his determination to succeed, he continued learning and improving his skills.</p>
+          <p>Along the way, he also helped other students by assisting them in simple tasks such as encoding documents and sharing useful techniques and tips about using AI tools with junior students.</p>
+          <p>Looking back on his journey, he realized that technology will always be part of everyday life wherever people go.</p>
+          <p>Most of all, he learned that with determination, support from friends, and responsible use of technology, students can overcome even the most difficult challenges.</p>
+          <p>For him, the journey of being a student is not just about learning how to code, but about proving that with perseverance, determination, and the help of others, even the hardest obstacles can be overcome.</p>
+        </div></div><div class="content-fade"></div></div>
+        <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </article>
+
+    <div class="back-to-top">
+      <a href="#"><i class="fas fa-arrow-up"></i> &nbsp;Back to Top</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Back to ByteLine</a>
+    </div>
+  </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-byteline" class="footer-section">
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for Art Appreciation. Volume I explores technology, youth, and creativity in the digital era.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 BSCS 1A &mdash; ByteLine Vol. I. All Rights Reserved.</div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

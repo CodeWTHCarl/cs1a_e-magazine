@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Works — ByteLine | BSCS 1A</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:'Lora',Georgia,serif;background:#f4f4f0;margin:0}
+    .cat-hero{background:linear-gradient(135deg, #0d0020 0%, #4a148c 100%);padding:3rem 5% 2.2rem;text-align:center;border-bottom:3px solid #FFC107}
+    .cat-back{display:inline-flex;align-items:center;gap:.5rem;font-family:'Exo 2',sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,193,7,.7);text-decoration:none;margin-bottom:1rem}
+    .cat-back:hover{color:#FFC107}
+    .cat-hero-label{font-family:'Exo 2',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,193,7,.7);margin:0 0 .5rem;display:block}
+    .cat-hero h1{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);color:#fff;margin:0 0 .4rem;letter-spacing:-.02em}
+    .cat-hero p{font-family:'Exo 2',sans-serif;font-style:italic;color:rgba(255,255,255,.45);font-size:.9rem;margin:0}
+    .jump-nav{position:sticky;top:60px;z-index:900;background:#4a148c;border-bottom:2px solid #FFC107;padding:.6rem 5%;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .jump-nav label{font-family:'Exo 2',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,193,7,.85);white-space:nowrap}
+    .jump-nav select{flex:1;max-width:520px;font-family:'Exo 2',sans-serif;font-size:.85rem;padding:.38rem .8rem;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,193,7,.35);border-radius:3px;cursor:pointer;outline:none}
+    .jump-nav select option{background:#4a148c;color:#fff}
+    .jump-btn{font-family:'Exo 2',sans-serif;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;background:#FFC107;color:#0d0020;border:none;padding:.42rem 1.2rem;border-radius:3px;cursor:pointer;font-weight:600}
+    .articles-container{max-width:860px;margin:0 auto;padding:2.5rem 5%}
+    .article-anchor{scroll-margin-top:130px}
+    .entry{background:#fff;border-radius:6px;padding:0;margin-bottom:3rem;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .entry-body{padding:2.2rem 2.5rem 2.5rem}
+    .entry-title{font-size:1.75rem}
+    .section-tag{background:#4a148c;color:#fff}
+    .entry-content h4,.pull-quote p{color:#4a148c}
+    .back-to-top{text-align:center;padding:1rem 0 3rem;font-family:'Exo 2',sans-serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+    .back-to-top a{color:#4a148c;text-decoration:none}
+    .back-to-top a:hover{color:#FFC107}
+    .section-group-title{font:700 .82rem 'Exo 2',sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#4a148c;margin:0 0 1.2rem;padding-left:.9rem;border-left:4px solid #FFC107}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-part" id="header-logos">
+            <img src="bipsu.png" alt="BiPSU Logo" class="logo">
+            <img src="STCS_LOGO.png" alt="STCS Logo" class="logo">
+        </div>
+        <div class="header-part" id="header-citation">
+            <strong>REPUBLIC OF THE PHILIPPINES<br>
+            BILIRAN PROVINCE STATE UNIVERSITY<br>
+            SCHOOL OF TECHNOLOGY AND COMPUTER STUDIES<br>
+            BSCS 1A</strong>
+        </div>
+        <div class="header-part" id="header-nav">
+            <a href="about-us.html" class="nav-link hide-mobile">About Us</a>
+            <a href="#contact" class="nav-link hide-mobile">Contact</a>
+            <div class="nav-dropdown">
+                <button id="nav-toggle" class="nav-icon-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="index.html#editors-note">Editorial Page</a>
+                    <a href="feature-articles.html">Feature Articles</a>
+                    <a href="human-interest.html">Human Interest</a>
+                    <a href="opinion-column.html">Opinion / Column</a>
+                    <a href="creative-works.html">Creative Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <div class="cat-hero">
+    <a href="index.html" class="cat-back"><i class="fas fa-arrow-left"></i> Back to ByteLine</a>
+    <span class="cat-hero-label">ByteLine Vol. I &nbsp;·&nbsp; 2026</span>
+    <h1>Creative Works</h1>
+    <p>Flash fiction and poems that explore the quiet struggles and possibilities of digital student life.</p>
+  </div>
+  <nav class="jump-nav" aria-label="Jump to article">
+    <label for="article-select"><i class="fas fa-list"></i> &nbsp;Jump to:</label>
+    <select id="article-select">
+      <option value="">— Select an Entry —</option>
+    </select>
+    <button class="jump-btn" id="jump-go">Go <i class="fas fa-arrow-right"></i></button>
+  </nav>
+  <div class="articles-container">
+
+    <section class="article-section">
+      <h2 class="section-title" style="margin-bottom:1.2rem;">Creative Articles</h2>
+
+      <article id="article-1" class="entry article-anchor">
+        <div class="entry-media flexible-media">
+          <!-- REPLACE CREATIVE ARTICLE 1 MAIN IMAGE HERE -->
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80" alt="Online culture and social media concept">
+        </div>
+        <p class="caption">One post, one clip, or one mistake can suddenly become a storm in the digital age.</p>
+        <div class="entry-body">
+          <span class="section-tag">Flash Fiction</span>
+          <h2 class="entry-title">Cancel Culture Among Youth in the Internet: Accountability or Online Mob Rule?</h2>
+          <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+            <p>In the digital age, a single mistake can travel faster than the truth. One tweet from years ago, one misunderstood video clip, or one controversial comment can suddenly explode across the internet. Within minutes, thousands of users may be calling for apologies, boycotts, or punishment. For many young people who spend a large part of their lives online, this phenomenon has become a familiar part of internet culture. Known as cancel culture, it has become one of the most debated features of modern digital communities.</p>
+            <p>Cancel culture refers to the act of publicly calling out, boycotting, or withdrawing support from a person, brand, or organization because of offensive statements or harmful actions. This process often takes place on major social media platforms such as Facebook, X, Instagram, and TikTok, where posts can spread instantly and discussions quickly attract massive attention. Supporters argue that cancel culture is a powerful way to hold people accountable. Critics, however, warn that it can easily turn into online mob behavior where judgment happens faster than understanding.</p>
+            <p>One reason cancel culture is especially common among youth is the sheer amount of time younger generations spend on social media. Because of this constant connection, young people are frequently exposed to trending controversies, viral posts, and social debates. When an issue spreads online, their reactions can spread just as quickly.</p>
+            <p>Another factor is the strong emphasis many young people place on social justice. For many youth, speaking out online is not simply entertainment but a way to defend values and demand change. In this sense, cancel culture can act as a modern form of digital activism, where communities publicly pressure individuals or institutions to take responsibility for harmful actions.</p>
+            <p>However, the same technology that empowers digital activism can also create serious problems. Social media platforms are designed to spread information quickly, often rewarding emotional reactions and viral content. Because of this speed, accusations and criticism can spread widely before the full story is verified. Context may be lost, facts may be incomplete, and edited clips can easily mislead viewers.</p>
+            <p>Researchers studying online behavior warn that digital environments can amplify “mob mentality.” Anonymity and distance reduce personal responsibility, allowing users to post harsh comments they might never say in person. This makes it easier for criticism to turn into harassment.</p>
+            <p>Supporters of cancel culture argue that public criticism is simply an expression of free speech. If someone behaves publicly, especially on social media, they should expect the public to respond. In this view, cancel culture is not punishment but accountability.</p>
+            <p>While this argument contains some truth, accountability requires fairness and careful judgment. Public shaming without context or evidence can become a form of digital vigilantism rather than justice. Without critical thinking, online reactions can become driven more by emotion than by facts.</p>
+            <p>The real challenge lies in learning how to use digital influence responsibly. Social media platforms are not courts of law, and viral trends should not replace careful investigation or thoughtful dialogue. If young people want to promote real justice rather than chaos, online activism must be guided by evidence, fairness, and critical thinking.</p>
+          </div></div><div class="content-fade"></div></div>
+          <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+        </div>
+      </article>
+      <hr class="article-divider">
+
+      <article id="article-2" class="entry article-anchor">
+        <div class="entry-media flexible-media">
+          <!-- REPLACE CREATIVE ARTICLE 2 MAIN IMAGE HERE -->
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&auto=format&fit=crop&q=80" alt="Laptop with code in a dark room">
+        </div>
+        <p class="caption">Sometimes the smallest victory is a program finally running after hours of doubt.</p>
+        <div class="entry-body">
+          <span class="section-tag">Flash Fiction</span>
+          <h2 class="entry-title">Version 1.0</h2>
+          <div class="collapsible-content"><div class="article-text"><div class="entry-content">
+            <p>The laptop screen was the only light in the dark dorm room. My eyes burned, but I kept staring at the code like it might magically fix itself if I looked hard enough. The same error message kept appearing: “expected ‘;’ before ‘}’”. Red lines filled the screen like the computer was judging every mistake I made.</p>
+            <p>The dorm was finally quiet. Most of the other students were either asleep or still typing confidently, like they actually understood what they were doing. Me? This was already my fifth time renaming the file: final_for_real_v3_dont_delete.cpp.</p>
+            <p>When I chose Computer Science, I imagined building apps, games, or maybe even artificial intelligence. I thought it would feel exciting, like creating something powerful. But first year was nothing like that. It was mostly programming basics, problem-solving exercises, and long nights trying to understand why one small line of code could break everything.</p>
+            <p>Some of my classmates seemed to know so much already. They talked about programming languages and projects they had built in senior high school. Meanwhile, my experience was limited to basic HTML from a high school class. Every time someone answered quickly in class, I felt more behind.</p>
+            <p>Scrolling through online forums didn’t help either. Students posted about launching their first web apps or winning hackathons. It made me wonder if I had chosen the wrong course. Late at night, a quiet question kept appearing in my head: Do I really belong here?</p>
+            <p>Then, after hours of trying, I noticed something.</p>
+            <p>One tiny semicolon was missing.</p>
+            <p>I fixed the line and pressed run.</p>
+            <p>For a moment, the screen stayed still.</p>
+            <p>Then green text appeared.</p>
+            <p><strong>Build successful.</strong></p>
+            <p><strong>Hello world.</strong></p>
+            <p>I stared at the screen in disbelief. It was a small program, something most people would consider simple. But at that moment, it felt like a huge victory. I leaned back in my chair and laughed quietly to myself.</p>
+            <p>Maybe I was still version 1.0—buggy, incomplete, and learning one mistake at a time.</p>
+            <p>Just then, my phone buzzed.</p>
+            <p>A new message appeared in the class group chat.</p>
+            <p>“Guys, does anyone know why my code keeps crashing?”</p>
+            <p>I looked at the sender’s name and paused.</p>
+            <p>It was the same classmate everyone thought was a coding genius.</p>
+            <p>For the first time that night, I smiled.</p>
+            <p>Maybe everyone here was still debugging something. Some of us were just better at hiding the errors.</p>
+          </div></div><div class="content-fade"></div></div>
+          <button class="read-more-btn" type="button"><span class="btn-text">Read full article</span> <i class="fas fa-chevron-down"></i></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="article-section">
+      <h2 class="section-title" style="margin-bottom:1.2rem;">Poems</h2>
+
+      <article id="poem-1" class="entry article-anchor">
+        <div class="entry-media flexible-media">
+          <!-- REPLACE POEM 1 MAIN IMAGE HERE -->
+          <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&auto=format&fit=crop&q=80" alt="Glowing wires and abstract light">
+        </div>
+        <p class="caption">A poem about technology, hope, and the future shaped by youth.</p>
+        <div class="entry-body">
+          <span class="section-tag">Poem</span>
+          <h2 class="entry-title">Wired Dreams</h2>
+          <div class="entry-content">
+            <div class="poem-block">
+              <span class="poem-title">Wired Dreams</span>
+              In glowing screens at break of dawn,<br>
+              We chase the light till night is gone.<br>
+              With curious minds and restless hands,<br>
+              We build our future’s shifting sands.<br><br>
+              In classrooms filled with codes and charts,<br>
+              Technology becomes our art.<br>
+              Through circuits, data, graphs, and gears,<br>
+              We turn our doubts into new frontiers.<br><br>
+              We are the youth — both bold and bright,<br>
+              Learning through pixels’ silent light.<br>
+              Assignments typed, ideas shared,<br>
+              In virtual rooms where thoughts are aired.<br><br>
+              Yet more than gadgets, grades, or fame,<br>
+              We carry hope, we spark the flame.<br>
+              For knowledge is our truest key<br>
+              To shape tomorrow’s destiny.<br><br>
+              So let the wires connect our dreams,<br>
+              Let learning flow in endless streams.<br>
+              For in our hands, the world will see<br>
+              What tech and youth together can be.
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr class="article-divider">
+
+      <article id="poem-2" class="entry article-anchor">
+        <div class="entry-media flexible-media">
+          <!-- REPLACE POEM 2 MAIN IMAGE HERE -->
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop&q=80" alt="Technology and learning workstation">
+        </div>
+        <p class="caption">A reminder that technology becomes meaningful when used with honesty and care.</p>
+        <div class="entry-body">
+          <span class="section-tag">Poem</span>
+          <h2 class="entry-title">Technology in Learning's Light</h2>
+          <div class="entry-content">
+            <div class="poem-block">
+              <span class="poem-title">Technology in Learning's Light</span>
+              In a world so vast, with screens so bright,<br>
+              We learn and grow from morning to night.<br>
+              With just a click, a tap, a swipe,<br>
+              Knowledge flows so fresh, so ripe.<br>
+              No longer bound by books alone,<br>
+              Through digital halls, our minds have grown.<br><br>
+              From videos, apps, and virtual space.<br>
+              Education moves at a faster pace.<br>
+              But with this power, rules must stay.<br>
+              To guide our path the proper way.<br>
+              Use tech to learn, not to stray.<br>
+              Let wisdom shine, don't go astray.<br><br>
+              No cheating hands, no copied lines.<br>
+              Integrity makes knowledge shine.<br>
+              Respect each source, give credit due.<br>
+              Let honesty shape the things we do.<br>
+              So use it well embrace it right.<br>
+              Let learning be your guiding light.<br>
+              For technology when used with care.<br>
+              Can take us farther anywhere!
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="back-to-top">
+      <a href="#"><i class="fas fa-arrow-up"></i> &nbsp;Back to Top</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="index.html"><i class="fas fa-home"></i> &nbsp;Back to ByteLine</a>
+    </div>
+  </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div id="about-byteline" class="footer-section">
+                <h4>About ByteLine</h4>
+                <p>ByteLine is the official e-magazine of BSCS 1A at Biliran Province State University, produced for Art Appreciation. Volume I explores technology, youth, and creativity in the digital era.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>School of Technology and Computer Studies</p>
+                <p>Biliran Province State University</p>
+                <p>Naval, Biliran Province</p>
+                <p class="footer-note">Submitted in partial fulfillment of the requirements for Art Appreciation, A.Y. 2025–2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 BSCS 1A &mdash; ByteLine Vol. I. All Rights Reserved.</div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
